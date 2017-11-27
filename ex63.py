@@ -1,12 +1,16 @@
-#EXERCICIO 63
 print('-='*20)
 print('Lembrando da sequencia de Fibonacci')
 print('-='*20)
-qts = int(input('Quantos números da sequência? '))
+n = int(input('Quantos números da sequência? '))
 cont = 0
-n_ant = 1
-n_novo = 1
-fib = n_ant + n_novo
-while cont < qts:
-    print(fib)
+ant = 0
+prox = 1
+while cont < n:
+    if cont == 0:
+        print('{}, '.format(cont),end='')
+    print('{}, '.format(prox), end='')
+    fib = ant
+    ant = prox
+    prox = fib + ant
     cont += 1
+
